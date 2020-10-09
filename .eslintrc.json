@@ -1,0 +1,44 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint", "unused-imports", "autofix","react-hooks","jsx-a11y"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "prettier",
+        "prettier/@typescript-eslint",
+        "plugin:jsx-a11y/recommended"
+    ],
+    "env": {
+        "es6": true,
+        "browser": true,
+        "jest": true,
+        "node": true
+    },
+    "settings": {
+        "react": {
+            "version": "detect",
+            "flowVersion": "0.53"
+        }
+    },
+    "rules": {
+        "@typescript-eslint/interface-name-prefix": 0,
+        "react/react-in-jsx-scope": 0,
+        "react/display-name": 0,
+        "react/prop-types": 0,
+        "@typescript-eslint/explicit-function-return-type": 0,
+        "@typescript-eslint/explicit-module-boundary-types": 0,
+        "@typescript-eslint/explicit-member-accessibility": 0,
+        "@typescript-eslint/indent": 0,
+        "@typescript-eslint/member-delimiter-style": 0,
+        "jsx-a11y/rule-name": 2,
+        // "@typescript-eslint/no-explicit-any": 0,
+        "react-hooks/rules-of-hooks":2,
+        "react-hooks/exhaustive-deps":1,
+        "autofix/no-debugger": 1,
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+        ]
+    }
+}
